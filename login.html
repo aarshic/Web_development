@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Login Page</title>
+<style>
+
+body{
+background-color: #AEADF7;  
+margin: 0;
+
+padding-top: 150px;
+
+}
+
+p{
+font-size: 1.2em;		
+ font-style: italic;
+}
+form fieldset input[type="submit"]{
+
+border-radius: 3px;-moz-border-radius: 3px;
+height: 30px; width=700px;
+
+}
+
+
+form fieldset input[type="text"], input[type="password"] {
+
+background-color: #e5e5e5;
+height: 30px;
+width: 300px;
+text-align:center;
+}
+
+
+</style>
+
+<script>
+function userType()
+{
+if(document.getElementById('a').checked){
+window.location="user_website";
+}
+else{
+window.location="admin_website";
+}
+
+
+</script>
+</head>
+<body>
+<!<div class="row">
+<div align="center">
+<form action="action_page.php">
+<fieldset>
+<p>Enter Username:</p>
+
+<input type="text" name="username" placeholder="username" required>
+<br>
+<br>
+<p>Enter your Password:</p>
+
+<input type="password" name="password" placeholder="password" required>
+<br>
+<br>
+<p>Login as: </p>
+
+<p><input type="radio" name="login" id="a" checked> User <br></p>
+<p><input type="radio" name="login" id="b" > Admin <br></p>
+<br>
+<p><input type="submit" value="Submit" onclick="userType()"></p>
+
+</fieldset>
+</form>
+</div>
+<!</div>
+</body>
+</html>
